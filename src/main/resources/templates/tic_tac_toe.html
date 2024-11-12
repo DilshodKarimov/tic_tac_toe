@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../static/style.css">
+
+<body>
+
+<form class="container" id="main" action="#" th:action="@{/tic_tac_toe}"  method="POST" >
+
+    <span >Tic Tac Toe</span>
+    <h1 th:text="${turn}" name="turn"></h1>
+
+    <div>
+    <input class="box"  type="submit" name="first" th:value="${first}"  style="border-left: 0; border-top: 0" id="box1">
+    <input class="box" type="submit" name="second" th:value="${second}" value="" style="border-top: 0">
+    <input class="box" type="submit" name="third"  th:value="${third}" style="border-top: 0; border-right: 0">
+    </div>
+    <div>
+    <input class="box" type="submit" name="fourth" th:value="${fourth}" style="border-left: 0">
+    <input class="box" type="submit" name="fiveth" th:value="${fiveth}" >
+    <input class="box" type="submit" name="sixth" th:value="${sixth}" style="border-right: 0" id="box6">
+    </div>
+    <div>
+    <input class="box" type="submit" name="seventh" th:value="${seventh}" style="border-left: 0; border-bottom: 0" id="box7">
+    <input class="box" type="submit" name="eigth" th:value="${eigth}" style="border-bottom: 0" id="box8">
+    <input class="box" type="submit" name="nineth" th:value="${nineth}" style="border-right: 0; border-bottom: 0" id="box9">
+    </div>
+    <button class="btn btn-rounded" type="submit" name="refresh" >Play Again</button>
+</form>
+
+</body>
+</html>
