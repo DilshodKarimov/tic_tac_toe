@@ -12,6 +12,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class MainController {
 
     Matrix matrix = new Matrix();
+
+    @GetMapping("/")
+    public String main(Model model) {
+        return "redirect:/tic_tac_toe";
+    }
+    
     @GetMapping("/tic_tac_toe")
     public String home(Model model) {
         print(model);
